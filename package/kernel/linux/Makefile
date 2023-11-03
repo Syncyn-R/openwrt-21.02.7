@@ -24,7 +24,8 @@ export SHELL:=/bin/sh
 include $(INCLUDE_DIR)/package.mk
 
 ifeq ($(DUMP),)
-  STAMP_BUILT:=$(STAMP_BUILT)_$(shell $(SCRIPT_DIR)/kconfig.pl $(LINUX_DIR)/.config | mkhash md5)
+#  STAMP_BUILT:=$(STAMP_BUILT)_$(shell $(SCRIPT_DIR)/kconfig.pl $(LINUX_DIR)/.config | mkhash md5)
+  STAMP_BUILT:=$(STAMP_BUILT)_5a722da41bc36de95a7195be6fce1b45
   -include $(LINUX_DIR)/.config
 endif
 
